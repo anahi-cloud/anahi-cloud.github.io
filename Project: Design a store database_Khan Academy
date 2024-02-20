@@ -1,0 +1,14 @@
+CREATE TABLE store (id INTEGER PRIMARY KEY, type TEXT, quantity INTEGER, aisle INTEGER, price INTEGER);
+
+INSERT INTO store VALUES (1, "T-Shirt", 12, 1, 5.99);
+INSERT INTO store VALUES (2, "Pants", 5, 2, 10.99);
+INSERT INTO store VALUES (3, "Jeans", 8, 2, 12.99);
+INSERT INTO store VALUES (4, "Blouse", 10, 1, 8.99);
+INSERT INTO store VALUES (5, "Socks", 6, 3, 3.99);
+INSERT INTO store VALUES (6, "Handbags", 5, 3, 15.99);
+INSERT INTO store VALUEs (7, "Shoes", 10, 3, 24.99);
+
+SELECT * FROM store;
+SELECT * FROM store WHERE price < 25 ORDER BY price;
+
+SELECT aisle, SUM(quantity) FROM store GROUP BY aisle
